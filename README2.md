@@ -4,7 +4,7 @@ Tutorial for anyone
 
 ini adalah acara buat variable di php
 
-```
+```javascript
 // index.js
 
 const express = require("express")
