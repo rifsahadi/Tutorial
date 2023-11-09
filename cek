@@ -1,0 +1,7 @@
+halo ini cara membuat variable
+
+<?php
+$tahun = 2023;
+?>
+
+terima kasih
