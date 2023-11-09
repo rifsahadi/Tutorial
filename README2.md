@@ -4,7 +4,7 @@ Tutorial for anyone
 
 ini adalah acara buat variable di php
 
-`
+```
 <?php
 
 namespace App\Exceptions;
@@ -55,6 +55,8 @@ class Handler extends ExceptionHandler
         });
     }
 }
-`
+
+?>
+```
 
 selesai
