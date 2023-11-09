@@ -5,58 +5,23 @@ Tutorial for anyone
 ini adalah acara buat variable di php
 
 ```
-<?php
+// index.js
 
-namespace App\Exceptions;
+const express = require("express")
+const app = express()
 
-use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
-use Throwable;
+// parsing json request
+app.use(express.json())
 
-class Handler extends ExceptionHandler
-{
-    /**
-     * A list of exception types with their corresponding custom log levels.
-     *
-     * @var array<class-string<\Throwable>, \Psr\Log\LogLevel::*>
-     */
-    protected $levels = [
-        //
-    ];
+// authenticate client
+app.post("/login", function(req, res) {})
 
-    /**
-     * A list of the exception types that are not reported.
-     *
-     * @var array<int, class-string<\Throwable>>
-     */
-    protected $dontReport = [
-        //
-    ];
+// send user data when client already authenticate
+app.get("/", function(req, res) {
+  res.json(req.user)
+})
 
-    /**
-     * A list of the inputs that are never flashed to the session on validation exceptions.
-     *
-     * @var array<int, string>
-     */
-    protected $dontFlash = [
-        'current_password',
-        'password',
-        'password_confirmation',
-    ];
-
-    /**
-     * Register the exception handling callbacks for the application.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        $this->reportable(function (Throwable $e) {
-            //
-        });
-    }
-}
-
-?>
+app.listen(3000)
 ```
 
 selesai
